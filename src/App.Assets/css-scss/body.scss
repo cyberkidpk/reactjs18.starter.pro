@@ -1,0 +1,23 @@
+@import './fonts.scss';
+@import './colors.scss';
+
+body #starterPro2022{
+  margin: 0;
+  font-family: 'Oxygen';
+  color: $primary-color;
+  background-color: $base-color;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: 'Oxygen',
+}
+#starterPro2022{
+  h1{
+    color: $primary-color;
+  }
+  h2{
+    color: $primary-color;
+  }
+}
