@@ -3,14 +3,30 @@ import {
   Route,
   Routes,
 } from 'react-router-dom';
+import { LayoutWrapperController } from '../layouts';
 
 const SplashLayout = React.lazy(() => import('../layouts/splash/SplashLayout'));
+const PrimaryLayout = React.lazy(() => import('../layouts/primary/primary.layout'));
 
 const AppRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<Suspense fallback={<div>Loading...</div>}><SplashLayout /></Suspense>} />
-      <Route path="/rpro2022" element={<Suspense fallback={<div>Loading...</div>}><SplashLayout /></Suspense>} />
+      <Route
+        path="/rpro2022"
+        element={
+          (
+            <Suspense fallback={
+              <div>Loading...</div>
+              }
+            >
+              <LayoutWrapperController>
+                <PrimaryLayout />
+              </LayoutWrapperController>
+            </Suspense>
+          )
+        }
+      />
     </Routes>
   );
 };

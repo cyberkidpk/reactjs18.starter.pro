@@ -4,6 +4,8 @@ module.exports = {
       'one-var': 'off',
       'no-var': 'off',
       'no-param-reassign': 'off',
+      'no-unused-vars': 'warn',
+      'no-restricted-globals': 'warn',
       'react/prop-types' : 'off',
       'padded-blocks': 'off',
       'arrow-body-style':'off',

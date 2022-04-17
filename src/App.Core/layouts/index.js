@@ -1,4 +1,4 @@
 import SplashLayout from './splash/SplashLayout';
+import LayoutWrapperController from './controller/LayoutWrapperController';
 
-const otherExportWillCome = {};
-export { SplashLayout, otherExportWillCome };
+export { SplashLayout, LayoutWrapperController };

@@ -1,7 +1,9 @@
-import { APP_MESSENGING_CONST } from '../../App.Constants';
+import { APP_DEVICE_LAYOUT_CONST, APP_MESSENGING_CONST } from '../../App.Constants';
 
-const MESSENGING_ACTIONS = {
+export const MESSENGING_ACTIONS = {
   fireSuccessMsg: { type: APP_MESSENGING_CONST.MSG.SUCCESS },
 };
 
-export default MESSENGING_ACTIONS;
+export const DEVICE_AND_LAYOUT_ACTIONS = {
+  fireDeviceMsg: { type: APP_DEVICE_LAYOUT_CONST.MSG.ISMOBILE },
+};
