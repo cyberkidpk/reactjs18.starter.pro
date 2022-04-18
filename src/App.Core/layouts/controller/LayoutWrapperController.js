@@ -21,7 +21,7 @@ const LayoutWrapperController = ({ children }) => {
 
   useEffect(() => {
     // setRefresh(new Date());
-    console.log(requestPayloadModel);
+    console.log('requestPayloadModel', resp, error, spinner);
   }, [resp, error, spinner]);
 
   useEffect(() => {

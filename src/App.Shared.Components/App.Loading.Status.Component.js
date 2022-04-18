@@ -11,10 +11,10 @@ const APILoadingStatusComponent = () => {
   var { [MESSANGING_KEY]: { reqPayMod } } = state;
   reqPayMod = !reqPayMod ? {} : reqPayMod.getGETPayload();
   const { resp, error, spinner } = useCURDOps(reqPayMod);
-  useMemo(() => {
+  useEffect(() => {
     MESSENGING_HANDLERS.dispatchSuccessMsg(dispatch, { message: { type: 'success', message: 'RESPONSE DATA', description: 'DATA RECEIVED' } });
   }, [resp]);
-  useMemo(() => {
+  useEffect(() => {
     MESSENGING_HANDLERS.dispatchSuccessMsg(dispatch, { message: { type: 'warn', message: 'RESPONSE DATA', description: 'ERROR RECEIVED FROM THE SERVER' } });
   }, [error]);
   useMemo(() => {
