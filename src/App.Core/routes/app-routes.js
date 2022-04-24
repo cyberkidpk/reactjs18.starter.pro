@@ -12,7 +12,18 @@ const PrimaryLayout = React.lazy(() => import('../layouts/primary/primary.layout
 const AppRoutes = () => {
   return (
     <Routes>
-      <Route path="/" element={<Suspense fallback={<AppSpinnerComponent />}><SplashLayout /></Suspense>} />
+      <Route
+        path="/"
+        element={
+          (
+            <Suspense fallback={
+              <AppSpinnerComponent />
+              }>
+              <SplashLayout />
+            </Suspense>
+          )
+        }
+      />
       <Route
         path="/rpro2022"
         element={
