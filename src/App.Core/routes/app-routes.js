@@ -21,7 +21,7 @@ const AppRoutes = () => {
               <AppSpinnerComponent />
               }
             >
-              <LayoutWrapperController pageApi={true}> 
+              <LayoutWrapperController pageApi>
                 <PrimaryLayout />
               </LayoutWrapperController>
             </Suspense>

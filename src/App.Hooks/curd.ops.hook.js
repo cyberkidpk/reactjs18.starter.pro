@@ -24,15 +24,18 @@ const useCURDOps = ({
     } else {
       axFormation = axios[method](url);
     } */
-    axios[method](url).then((res) => {
-      setResp(res.data);
-    })
-      .catch((err) => {
-        setError(err);
+    const slashCount = (url.match(/\//g) || []).length;
+    if (method && slashCount >= 3) {
+      axios[method](url).then((res) => {
+        setResp(res.data);
       })
-      .finally(() => {
-        setSpinner(false);
-      });
+        .catch((err) => {
+          setError(err);
+        })
+        .finally(() => {
+          setSpinner(false);
+        });
+    }
   };
 
   useEffect(() => {

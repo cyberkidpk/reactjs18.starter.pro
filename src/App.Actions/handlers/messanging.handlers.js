@@ -11,10 +11,12 @@ const fireSetAppActivePageAPIDispatch = (dispatch, payload) => dispatch(
   }
 );
 const isRefreshDispatch = (dispatch, payload) => dispatch({ ...APP_ACTIVE_PAGE_ACTIONS.isRefresh, ...payload });
+const setAppActivePageDataDispatchFunc = (dispatch, payload) => dispatch({ ...APP_ACTIVE_PAGE_ACTIONS.setActivePageData, ...payload });
 
 export const MESSENGING_HANDLERS = {
   dispatchSuccessMsg: extractDispatch,
   dispatchDeviceResolution: extractDeviceDispatch,
   setAppActivePageAPIDispatch: fireSetAppActivePageAPIDispatch,
-  dispatchIsRefresh: isRefreshDispatch
+  dispatchIsRefresh: isRefreshDispatch,
+  setAppActivePageDataDispatch: setAppActivePageDataDispatchFunc
 };

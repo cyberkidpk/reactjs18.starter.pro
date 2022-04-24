@@ -6,7 +6,7 @@ import { combineReducersForStore } from '../App.Core/utils';
 export const initialState = {
   messenging: { message: {} },
   deviceAndLayout: { deviceRes: {} },
-  activePage: { apiUrl: '', refresh: false },
+  activePage: { apiUrl: '', refresh: false, data: [] },
 };
 const appReducers = {
   messenging: messengingReducer,

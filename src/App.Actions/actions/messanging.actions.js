@@ -10,5 +10,6 @@ export const DEVICE_AND_LAYOUT_ACTIONS = {
 
 export const APP_ACTIVE_PAGE_ACTIONS = {
   setActivePageAPIUrl: { type: APP_ACTIVE_PAGE_CONST.MSG.SETAPIURL },
-  isRefresh: { type: APP_ACTIVE_PAGE_CONST.MSG.ISREFRESH }
+  isRefresh: { type: APP_ACTIVE_PAGE_CONST.MSG.ISREFRESH },
+  setActivePageData: { type: APP_ACTIVE_PAGE_CONST.MSG.SETACTIVEPAGEDATA }
 };
