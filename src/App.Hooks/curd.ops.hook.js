@@ -11,6 +11,7 @@ const useCURDOps = ({
   const [resp, setResp] = useState(null);
   const [error, setError] = useState('');
   const [spinner, setSpinner] = useState(true);
+  var [isRan, setIsRan] = useState(false);
 
   // eslint-disable-next-line consistent-return
   const fetchData = () => {
@@ -35,10 +36,19 @@ const useCURDOps = ({
   };
 
   useEffect(() => {
-    fetchData();
+    const fetchRan = fetchData();
+    if (url) {
+      setIsRan(true);
+    } else {
+      setIsRan(false);
+    }
   }, [method, url, body, headers]);
-
-  return { resp, error, spinner };
+  return {
+    resp,
+    error,
+    spinner,
+    isRan
+  };
 };
 
 export default useCURDOps;
