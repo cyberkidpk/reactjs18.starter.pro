@@ -1,0 +1,10 @@
+@import './body.scss';
+
+#App-Layout-Container header {
+  color: $primary-color;
+  a {
+    color: $primary-color;
+    font-size: '1.4rem';
+  }
+
+}

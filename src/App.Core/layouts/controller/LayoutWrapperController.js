@@ -1,5 +1,6 @@
-import { Footer, Header } from 'antd/lib/layout/layout';
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import Layout, { Footer, Header } from 'antd/lib/layout/layout';
 import { useMediaQuery } from 'react-responsive';
 import { MESSENGING_HANDLERS } from '../../../App.Actions';
 import { APP_ACTIVE_PAGE_ACTIONS } from '../../../App.Actions/actions/messanging.actions';
@@ -8,6 +9,7 @@ import { useAppState } from '../../parent-context';
 import { useCURDOps } from '../../../App.Hooks';
 import RequestPayloadModel from '../../../App.Models/request.payload';
 import APILoadingStatusComponent from '../../../App.Shared.Components/App.Loading.Status.Component';
+import '../../../App.Assets/css-scss/body.scss';
 
 const LayoutWrapperController = ({ pageApi, children }) => {
   const [state, dispatch] = useAppState();
@@ -89,12 +91,16 @@ const LayoutWrapperController = ({ pageApi, children }) => {
   }, [resp]);
 
   return (
-    <>
+    <Layout id="App-Layout-Container">
       <APILoadingStatusComponent error={error} resp={resp} spinner={spinner} isRan={isRan} />
-      <Header>This is header</Header>
+      <Header>
+        <Link to="/" state={{ fromDashboard: true }}>
+          Go back to home
+        </Link>
+      </Header>
       {children}
       <Footer>This is footer</Footer>
-    </>
+    </Layout>
   );
 };
 export default LayoutWrapperController;
