@@ -1,4 +1,4 @@
 import AppRoutes from './app-routes';
+import SecureRouteCustom from './app-okta-secure-route';
 
-const otherExports = {};
-export { AppRoutes, otherExports };
+export { AppRoutes, SecureRouteCustom };
