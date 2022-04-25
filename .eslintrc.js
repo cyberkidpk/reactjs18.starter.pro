@@ -19,7 +19,7 @@ module.exports = {
       'react/jsx-filename-extension': 'off',
       'react/function-component-definition':'warn',
       'comma-dangle':'warn',
+      'react/jsx-props-no-spreading':'warn',
       'linebreak-style': 0,
     },
-    
   };
