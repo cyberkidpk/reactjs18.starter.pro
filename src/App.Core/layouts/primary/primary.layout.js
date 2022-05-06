@@ -23,7 +23,9 @@ const PrimaryLayout = () => {
         <Card.Grid sm={24} style={gridStyle}>Content</Card.Grid>
         <Card.Grid sm={24} style={gridStyle}>Content</Card.Grid>
       </Card>
+
     </Layout>
+
   );
 };
 

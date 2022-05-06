@@ -15,7 +15,15 @@ const useCURDOps = ({
 
   // eslint-disable-next-line consistent-return
   const fetchData = () => {
+    // const head = headers ? JSON.parse(headers) : APP_CONST.REQUEST_HEADER;
+    // const bod = body || null;
+    // let axFormation;
     if (!url) { return false; }
+    /* if (bod) {
+      axFormation = axios[method](url, JSON.parse(head), JSON.parse(bod));
+    } else {
+      axFormation = axios[method](url);
+    } */
     const slashCount = (url.match(/\//g) || []).length;
     if (method && slashCount >= 3) {
       axios[method](url).then((res) => {

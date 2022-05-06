@@ -1,9 +1,9 @@
 import { OktaAuth } from '@okta/okta-auth-js';
 
-const oktaAuth = new OktaAuth({
+const oktaAuthObj = new OktaAuth({
   issuer: process.env.REACT_APP_OKTA_ISSUER,
   clientId: process.env.REACT_APP_OKTA_CLIENT_ID,
-  redirectUri: `${process.env.REACT_APP_REDIRECT_URI}/login/callback`
+  redirectUri: process.env.REACT_APP_OKTA_REDIRECT_URI,
 });
 
-export default oktaAuth;
+export default oktaAuthObj;
